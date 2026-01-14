@@ -198,7 +198,9 @@ export class HiveMultisig {
               username: data.username,
               message: data.username,
               method: data.keyType,
-              title: data.title,
+              title:
+                data.title ||
+                `Hive Multisig Login: verify ${data.keyType} key for @${data.username}`,
             } as SignBuffer);
             if (signBuffer.success) {
               let publicKey = signBuffer.publicKey
