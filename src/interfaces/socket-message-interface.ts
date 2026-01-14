@@ -33,6 +33,7 @@ export interface SignerConnectMessage extends SocketMessagePayload {
   message?: string;
   username: string;
   keyType: KeychainKeyTypes;
+  title?: string;
 }
 
 export interface SignerConnectResponse {
